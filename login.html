@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      .error-line {
+        color: red;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- write heder code here -->
+      <!-- here is global nav -->
+      <div class="header-nav">
+        <!-- here logo of header-nav  -->
+        <div class="header-logo">
+          <a href=""
+            ><img
+              src="./images/WElls-Fargo-Horrizontal-removebg-preview.png"
+              alt="Logo"
+          /></a>
+        </div>
+
+        <!-- -home-service-etc -->
+        <div class="header-menu" id="header-menu">
+          <ul>
+            <li>
+              <a href="">Enroll</a>
+            </li>
+            <li>
+              <a href="">Customre Service</a>
+            </li>
+            <li>
+              <a href="">ATMs/Locations</a>
+            </li>
+
+            <li>
+              <a href="">Español</a>
+            </li>
+            <li class="">
+              <div class="search-div">
+                <input type="text" placeholder="Search" />
+                <img src="./images/icons8-search-60.png" alt="" />
+              </div>
+            </li>
+
+            <!-- here this div use for calling  -->
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="border-div"></div>
+
+    <main>
+      <div class="img-absolute">
+        <img src="./images/COB-BOB-IRT-enroll_balloons.jpg" alt="" />
+      </div>
+      <div class="img-absolute hi"></div>
+      <div class="form-div">
+        <div class="form-div-child">
+          <p>WELCOME!</p>
+          <p>Sign on to manage your accounts</p>
+          <div>
+            <input type="text" placeholder="Username" id="user" />
+            <div id="error-user" class="error-line"></div>
+            <input type="text" placeholder="Password" id="pass" />
+            <div id="error-pass" class="error-line"></div>
+            <div class="select-div">
+              <input type="checkbox" name="" id="select" />
+              <span>Save Username</span>
+            </div>
+            <div id="error-select" class="error-line"></div>
+            <button onclick="check_error()">Sign on</button>
+          </div>
+        </div>
+        <div class="form-div-bottom">
+          <a href="#">Forgot username or password?</a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function give_error(id, error) {
+        var Id = document.getElementById(id);
+        Id.innerHTML = error;
+      }
+      function check_error() {
+        var username = document.getElementById("user").value.trim();
+        var password = document.getElementById("pass").value.trim();
+        var checkbox = document.getElementById("select").checked;
+
+        if (username == "") {
+          give_error("error-user", "Username can not be empty");
+        } else {
+          give_error("error-user", "");
+        }
+        if (password == "") {
+          give_error("error-pass", "Password can not be empty");
+        } else {
+          give_error("error-pass", "");
+        }
+        if (!(username == "") && !(password == "")) {
+          if (password == "*****") {
+            location.href = "./pages/account-summary.html";
+            give_error("error-pass", "");
+          } else if (password == "*******") {
+            location.href = "./pages/account-summary-hp.html";
+            give_error("error-pass", "");
+          } else {
+            give_error("error-pass", "Password does not match");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+<!-- <a href="./pages/account-summary.html" style="color:#fff;">Sign on</a> -->
