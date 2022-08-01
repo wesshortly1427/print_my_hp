@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/money-transfer.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      #error-line {
+        font-size: 15px;
+        font-weight: 500;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- write heder code here -->
+      <!-- here is global nav -->
+      <div class="header-nav">
+        <!-- here logo of header-nav  -->
+        <div class="header-logo">
+          <a href=""
+            ><img
+              src="../images/WElls-Fargo-Horrizontal-removebg-preview.png"
+              alt="Logo"
+          /></a>
+        </div>
+
+        <!-- -home-service-etc -->
+        <div class="header-menu" id="header-menu">
+          <ul>
+            <li>
+              <a href="">Enroll</a>
+            </li>
+            <li>
+              <a href="">Customre Service</a>
+            </li>
+            <li>
+              <a href="">ATMs/Locations</a>
+            </li>
+
+            <li>
+              <a href="">Español</a>
+            </li>
+            <li class="">
+              <div class="search-div">
+                <input type="text" placeholder="Search" />
+                <img src="../images/icons8-search-60.png" alt="" />
+              </div>
+            </li>
+
+            <!-- here this div use for calling  -->
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="border-div"></div>
+
+    <div class="small-header">
+      <ul>
+        <li>
+          <a href="#">Accounts</a
+          ><span><img src="../images/icons8-down-24.png" alt="" /></span>
+        </li>
+        <li>
+          <a href="#">Brokerage</a
+          ><span><img src="../images/icons8-down-24.png" alt="" /></span>
+        </li>
+        <li>
+          <a href="#">Transfer & Pay</a
+          ><span><img src="../images/icons8-down-24.png" alt="" /></span>
+        </li>
+        <li>
+          <a href="#">Plan & Learn</a
+          ><span><img src="../images/icons8-down-24.png" alt="" /></span>
+        </li>
+        <li>
+          <a href="#">Security & Support</a
+          ><span><img src="../images/icons8-down-24.png" alt="" /></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-summary">
+      <img src="../images/icons8-home-50.png" alt="" />
+      <p>Account Summary</p>
+    </div>
+
+    <main>
+      <div class="img-absolute">
+        <img src="../images/COB-BOB-IRT-enroll_balloons.jpg" alt="" />
+      </div>
+      <div class="img-absolute hi"></div>
+      <div class="main-div">
+        <div class="left-money-div">
+          <div class="left-money-div-1">
+            <p>Transfer Money</p>
+            <a href="#">Help</a>
+          </div>
+          <div class="left-money-div-2">
+            <!-- <p>Non-Wells-Fargo accounts:   <a href="#">Add account</a> <a href="#">Manage</a></p> -->
+          </div>
+          <div class="left-money-div-input">
+            <p>Form</p>
+            <select id="select">
+              <option value="false">Select Account</option>
+              <option value="1">HP (..1290) $ 334,329.58</option>
+              <option value="1">HP Premium (..5454) $ 229,521.38</option>
+              <option value="1">HP Main (..2546) $ 234,329.23</option>
+              <option value="1">
+               Hewlett Packard Premium (..7290) $ 129,144.18
+              </option>
+            </select>
+          </div>
+          <div class="left-money-div-input">
+            <p>To</p>
+            <input type="text" placeholder="Name of Bank" id="b-name" />
+          </div>
+          <div class="left-money-div-input">
+            <p>Last 4 digit</p>
+            <input type="text" placeholder="1234" id="last-digit" />
+          </div>
+          <div class="left-money-div-input">
+            <p>Amount</p>
+            <div class="dollar-input">
+              <div class="dollar-div">
+                <p>$</p>
+              </div>
+              <div class="input-div-text">
+                <input type="text" placeholder="234,231.33" id="amount" />
+              </div>
+            </div>
+          </div>
+          <div class="left-money-div-input">
+            <p>Memo</p>
+            <input type="text" placeholder="......." id="memo" />
+          </div>
+          <div id="error-line"></div>
+          <div class="btn-div">
+            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-primary" onclick="check_error()">
+              Submit
+            </button>
+          </div>
+        </div>
+        <div class="right-detail-div">
+          <div class="right-detail-div-1">
+            <img src="../images/icons8-minus-50.png" alt="" />
+            <span>Transfer & payment activity (0)</span>
+          </div>
+          <div class="right-detail-div-2">
+            <div class="right-detail-div-2-1">
+              <p>You have no shcheduled transfers or payments.</p>
+            </div>
+          </div>
+          <div class="right-detail-div-3">
+            <ul>
+              <li>
+                <div class="li-link">
+                  <p>Go to Transfer & Payment Activity</p>
+                  <img src="../images/icons8-down-24.png" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="li-link">
+                  <p>Manage alerts to stay on track with your payments</p>
+                  <img src="../images/icons8-down-24.png" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="li-link border-none">
+                  <p>View your statement for more transcition details</p>
+                  <img src="../images/icons8-down-24.png" alt="" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      let c = `A highly secured link has been sent to your online banking of your respective Bank. Plaese follow the following steps to accept the deposit now  or else link will be deactivated in 10 minutes  \n\r
+1. Go to your online banking and look for the secure link\n\r
+2. Click on Accept in order to accept your deposit \n\r
+3.  A confirmation number will be generated with thank you message.\n\r
+\n\rNote: For Any queries or request please get in touch with your billing manager, Thank You .`;
+
+      function give_error(id, error) {
+        var Id = document.getElementById(id);
+        Id.innerHTML = error;
+      }
+      function check_error() {
+        var select = document.getElementById("select").value.trim();
+        var bank = document.getElementById("b-name").value.trim();
+        var digit = document.getElementById("last-digit").value.trim();
+        var amount = document.getElementById("amount").value.trim();
+        var memo = document.getElementById("memo").value.trim();
+
+        //  console.log(select);
+        //  console.log(bank);
+        // console.log(amount);
+        // console.log(memo);
+        // console.log(digit);
+
+        if (
+          !(select == "false") &&
+          !(bank == "") &&
+          !(digit == "") &&
+          !(amount == "") &&
+          !(memo == "")
+        ) {
+          swal(
+            " Thank you for submitting the Deposit Request . ",
+            c,
+            "success"
+          );
+        } else {
+          give_error("error-line", "Please fill all the field");
+        }
+      }
+      //  swal(" Thank you for submitting the Deposit Request . ", c, "success")
+    </script>
+  </body>
+</html>

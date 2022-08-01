@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --nav-color: #d71e28;
+}
+
+/* here is global nav */
+
+.header {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.header-nav {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14%;
+  background-color: var(--nav-color);
+}
+
+/* here logo of header-nav  */
+
+.header-logo > a > img {
+  height: 80px;
+  cursor: pointer;
+}
+
+/* -home-service-etc  */
+
+.header-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu > ul {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-menu > ul > li {
+  margin-right: 25px;
+  transition: 0.8s;
+}
+
+.header-menu > ul > li:last-child {
+  margin-right: 2px;
+}
+
+.header-menu > ul > li > a {
+  color: #fff;
+  font-size: 16px;
+  padding: 25px 0;
+}
+
+.sub-menu {
+  position: absolute;
+  margin-top: 20px;
+  display: none;
+  background-color: var(--color-txt-1);
+  padding: 10px 15px;
+  font-size: 14px;
+  z-index: 1000;
+  line-height: 2;
+  border-radius: 3px;
+  left: 40%;
+  transition: 0.8s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.sub-menu-car {
+  width: 25%;
+  left: 55%;
+  transition: 0.8s;
+}
+
+.sub-menu-blog {
+  left: 70%;
+  transition: 0.8s;
+}
+
+.sub-menu > div {
+  display: inline-flex;
+}
+
+.sub-menu > div > ul > li > a {
+  color: var(--color-black);
+  padding: 0 10px;
+}
+
+.sub-menu > div > ul > li > a:hover {
+  color: var(--nav-color);
+}
+
+.header-menu > ul > li:hover .sub-menu {
+  display: block;
+  position: absolute;
+}
+
+.border-div {
+  background-color: #fcc60a;
+  width: 100%;
+  height: 4px;
+}
+
+.search-div {
+  background-color: #fff;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 7px 12px;
+  border-radius: 4px;
+  width: 100px;
+}
+
+.search-div > input {
+  border: none;
+  outline: none;
+  width: 70%;
+  font-size: 14px;
+}
+.search-div > input::placeholder {
+  font-size: 14px;
+}
+
+.search-div > img {
+  height: 20px;
+}
+.small-header {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.6% 14%;
+  border-right: 1px solid #000;
+  text-align: center;
+}
+.small-header > ul {
+  display: inline-flex;
+}
+.small-header > ul > li {
+  border-right: 1px solid #000;
+  display: flex;
+  align-items: center;
+  padding: 1px 35px;
+}
+.small-header > ul > li:last-child {
+  border-right: none;
+}
+.small-header > ul > li > a {
+  font-size: 15px;
+  color: #000;
+}
+.small-header > ul > li > span > img {
+  width: 10px;
+  height: auto;
+  margin-left: 8px;
+}
+.header-summary {
+  width: 100%;
+  padding: 0.5% 15%;
+  background-color: #e6e6e3;
+  display: inline-flex;
+  align-content: center;
+}
+.header-summary > img {
+  width: auto;
+  height: 18px;
+  margin-top: 2px;
+}
+.header-summary > p {
+  margin-left: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+}
+.img-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 95vh;
+  width: 100%;
+}
+.img-absolute > img {
+  width: 100%;
+  height: 100%;
+}
+.hi {
+  background-color: #00000052;
+}
+
+.main-div {
+  position: absolute;
+  width: 100%;
+  height: 95vh;
+  padding: 0 15%;
+  display: grid;
+  grid-template-columns: 68% 32%;
+}
+
+.left-money-div {
+  background-color: #fff;
+  padding: 3%;
+}
+.right-detail-div {
+  background-color: #fff;
+  padding-left: 1%;
+}
+.left-money-div-1 {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.left-money-div-1 > p {
+  font-size: 30px;
+}
+
+.left-money-div-1 > a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.left-money-div-2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+}
+.left-money-div-2 > p {
+  font-weight: 500;
+}
+.left-money-div-2 > p > a {
+  margin-left: 5px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.left-money-div-input {
+  padding-top: 3%;
+  width: 57%;
+}
+.left-money-div-input > p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.left-money-div-input > select {
+  padding: 10px;
+  outline: none;
+  width: 100%;
+}
+.form-control {
+  width: 60% !important;
+  border: 1px solid #00000052;
+  outline: none;
+}
+.dollar-input {
+  width: 60%;
+  height: 40px;
+  border: 1px solid #00000052;
+  display: inline-flex;
+  align-items: center;
+}
+.dollar-div {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(128, 128, 128, 0.195);
+  border-right: 1px solid #00000052;
+}
+.input-div-text {
+  padding: 0 10px;
+}
+.input-div-text > input {
+  border: none;
+  outline: none;
+  width: 100%;
+  /* font-size: 17px; */
+}
+
+.btn-div {
+  border-top: 1px solid rgb(153, 153, 153);
+  margin-top: 4%;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  padding: 8px 30px;
+  background-color: #e6e6e3;
+  border: none;
+  margin: 4% 0;
+  font-size: 16px;
+  margin-left: 15px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.btn:hover {
+  opacity: 1;
+}
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* now right time to do right section */
+right-detail-div {
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.244);
+}
+.right-detail-div-1 {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 4% 5px;
+  display: inline-flex;
+  align-items: center;
+}
+.right-detail-div-1 > img {
+  height: 25px;
+  margin-right: 6px;
+}
+
+.right-detail-div-1 > span {
+  font-size: 15px;
+}
+.right-detail-div-2 {
+  padding: 4% 3% 7% 3% !important;
+  background-color: #e6e6e3;
+  border-bottom: 1px solid #000;
+}
+
+.right-detail-div-2-1 {
+  padding: 3px;
+  background-color: #fff;
+  border: 1px solid #00000052;
+  font-size: 15px;
+  font-weight: 500;
+}
+.right-detail-div-3 {
+  padding: 0 3%;
+  padding-right: 4%;
+  border-bottom: 2px solid #000;
+  background-color: #e6e6e3;
+}
+.li-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6% 0;
+  border-bottom: 1px solid #000;
+}
+/* .li-link:last-child {
+  border-bottom: none;
+} */
+.border-none {
+  border: none;
+}
+.li-link > img {
+  width: 12px;
+  transform: rotate(270deg);
+}
+.li-link > p {
+  font-size: 15px;
+  width: 90%;
+}
+.left-money-div-input > input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+/* #f3f3f3
+e8b91f
+e6e6e3 */
+
+/* Thank you for submitting the Deposit Request . A highly secured link has been sent to your online banking of your respective Bank. Plaese follow the following steps to accept the deposit now  or else link will be deactivated in 10 minutes 
+1. Go to your online banking and look for the secure link
+2. Click on Accept in order to accept your deposit 
+3.  A confirmation number will be generated with thank you message.
+
+
+Note: For Any queries or request please get in touch with your billing manager, Thank You .*/
